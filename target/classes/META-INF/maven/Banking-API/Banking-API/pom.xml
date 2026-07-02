@@ -125,6 +125,12 @@ xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/
 			<version>20260522</version>
 			<scope>compile</scope>
 	</dependency>
+
+<dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber7-adapter</artifactId>
+    <version>1.14.0</version>
+</dependency>
 	
 </dependencies>
 </project>

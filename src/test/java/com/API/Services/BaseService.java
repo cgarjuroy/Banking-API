@@ -1,4 +1,4 @@
-package com.API.Services;
+package com.api.services;
 
 import static io.restassured.RestAssured.given;
 
@@ -19,5 +19,20 @@ public class BaseService {
 	protected Response postMethod(Object payload, String path)
 	{
 		return request.contentType(ContentType.JSON).body(payload).post(path);
+	}
+	
+	protected Response getMethod(String path)
+	{
+		return request.get(path);
+	}
+	
+	protected void getToken(String token)
+	{
+		request.header("Authorization", "Bearer "+token);
+	}
+	
+	protected Response putMethod(Object payload, String path)
+	{
+		return request.contentType(ContentType.JSON).body(payload).put(path);
 	}
 }

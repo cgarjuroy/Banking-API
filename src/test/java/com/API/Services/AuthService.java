@@ -1,6 +1,6 @@
-package com.API.Services;
+package com.api.services;
 
-import com.models.Request.SignUpRequest;
+import com.api.models.request.SignUpRequest;
 
 import io.restassured.response.Response;
 
