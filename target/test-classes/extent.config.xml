@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <theme>dark</theme>
+    <reportName>Automation Execution Report</reportName>
+    <documentTitle>Test Results</documentTitle>
+    <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+</configuration>
