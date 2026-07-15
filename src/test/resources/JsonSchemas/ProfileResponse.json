@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "username",
+    "email",
+    "firstName",
+    "lastName",
+    "mobileNumber"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "mobileNumber": {
+      "type": "string",
+      "pattern": "^[0-9]{10,15}$"
+    }
+  }
+}

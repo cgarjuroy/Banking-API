@@ -9,20 +9,25 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.response.Response;
 
 
-public class SignUp {
+public class SignUp_01 {
 	
-	Response response;
-	SignUpRequest signUpRequest;
-	Faker faker;
+	private SignUpRequest signUpRequest;
+	private TestContext context;
+	private Faker faker;
+	private final AuthService authService;
 	
+	public SignUp_01(TestContext context,AuthService authService) {
+		this.context = context;
+		this.authService = authService;
+	}
+
 	@Given("User has sign up details")
 	public void user_has_sign_up_details() {
 		
 		faker = new Faker();
-		signUpRequest = new SignUpRequest.Builder()
+		signUpRequest = SignUpRequest.builder()
 					.username(faker.name().username())
 					.email(faker.internet().emailAddress())
 					.firstName("Arjun")
@@ -33,16 +38,11 @@ public class SignUp {
 
 	@When("User created new account")
 	public void user_created_new_account() {
-	    AuthService authService = new AuthService();
-	    response = authService.signUp(signUpRequest);
+	    context.setResponse(authService.signUp(signUpRequest));
 	}
 
 	@Then("Account is created successfully")
 	public void account_is_created_successfully() {
-		try {
-			Assert.assertEquals(response.asPrettyString(), "User registered successfully!");
-		}catch (Exception e) {
-			Assert.fail();
-		}
+		Assert.assertEquals(context.getResponse().asPrettyString(), "User registered successfully!");
 	}
 }

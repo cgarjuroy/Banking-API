@@ -4,9 +4,11 @@ import com.api.models.request.PasswordRequest;
 
 import io.restassured.response.Response;
 
+
 public class UserManagement extends BaseService {
 	
-	private static final String PATH = "/api/users";
+	private final String PATH = "/api/users";
+	private final String SCHEMA_PATH = "JsonSchemas/ProfileResponse.json";
 	
 	
 	public void token(String token) {
@@ -23,4 +25,10 @@ public class UserManagement extends BaseService {
 	{
 		return putMethod(payload, PATH + "/change-password");
 	}
+	
+	public void schemaValidation(Response response)
+	{
+		 jsonSchemaValidator(response, SCHEMA_PATH);
+	}
+	
 }

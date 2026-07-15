@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Cucumber API Automation Suite" parallel="methods" thread-count="4">
+    
+    <listeners>
+        <!-- Injects the dynamic retry logic into your cucumber runner -->
+        <listener class-name="com.api.listners.AnnotationTransformer" />
+    </listeners>
+
+    <test name="API Tests">
+        <classes>
+            <!-- Your standard Cucumber TestNG Runner Class -->
+            <class name="com.api.testRuns.RunTest" />
+        </classes>
+    </test>
+</suite>

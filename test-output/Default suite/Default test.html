@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 02 18:32:46 IST 2026</td>
+<td>Started on:</td><td>Mon Jul 06 22:13:11 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11720 ms)</td>
+<tr><td>Total time:</td><td>9 seconds (9923 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,41 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User updates password", "Display user profile details"</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at com.api.stepDefinitions.UserProfile_02.password_is_updated_successfully(UserProfile_02.java:68)
+	at ✽.Password is updated successfully(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1452266462", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1452266462'><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at com.api.stepDefinitions.UserProfile_02.password_is_updated_successfully(UserProfile_02.java:68)
+	at ✽.Password is updated successfully(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:16)
+</pre></div></td>
+<td>0</td>
+<td>com.api.testRuns.RunTest@1807e3f6</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,20 +111,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Display account details", "Display user account details"</td>
-<td></td>
-<td>0</td>
-<td>com.api.testRuns.RunTest@338fc1d8</td></tr>
-<tr>
 <td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sign-up new user", "Sign-Up a new User"</td>
 <td></td>
-<td>8</td>
-<td>com.api.testRuns.RunTest@338fc1d8</td></tr>
+<td>5</td>
+<td>com.api.testRuns.RunTest@1807e3f6</td></tr>
 <tr>
 <td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login", "Sign-Up a new User"</td>
 <td></td>
-<td>0</td>
-<td>com.api.testRuns.RunTest@338fc1d8</td></tr>
+<td>1</td>
+<td>com.api.testRuns.RunTest@1807e3f6</td></tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Display user details", "Display user profile details"</td>
+<td></td>
+<td>1</td>
+<td>com.api.testRuns.RunTest@1807e3f6</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,0 +1,533 @@
+<html>
+<head>
+<title>TestNG:  API Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>API Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/3</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 08 22:44:44 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>9 seconds (9065 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User updates password", "Display user profile details"</td>
+<td><div><pre>java.lang.RuntimeException: Status code generated is 500
+	at com.api.filters.CustomError.filter(CustomError.java:19)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at com.api.services.BaseService.putMethod(BaseService.java:45)
+	at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+	at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+	at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1039107075", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1039107075'><pre>java.lang.RuntimeException: Status code generated is 500
+	at com.api.filters.CustomError.filter(CustomError.java:19)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at com.api.services.BaseService.putMethod(BaseService.java:45)
+	at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+	at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+	at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+</pre></div></td>
+<td>0</td>
+<td>com.api.testRuns.RunTest@4e5ed836</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Sign-up new user", "Sign-Up a new User"</td>
+<td></td>
+<td>5</td>
+<td>com.api.testRuns.RunTest@4e5ed836</td></tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Display user details", "Display user profile details"</td>
+<td></td>
+<td>0</td>
+<td>com.api.testRuns.RunTest@4e5ed836</td></tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login", "Sign-Up a new User"</td>
+<td></td>
+<td>1</td>
+<td>com.api.testRuns.RunTest@4e5ed836</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User updates password", "Display user profile details"</td>
+<td><div><pre>java.lang.RuntimeException: Status code generated is 500
+	at com.api.filters.CustomError.filter(CustomError.java:19)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at com.api.services.BaseService.putMethod(BaseService.java:45)
+	at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+	at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+	at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1564250348", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1564250348'><pre>java.lang.RuntimeException: Status code generated is 500
+	at com.api.filters.CustomError.filter(CustomError.java:19)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at com.api.services.BaseService.putMethod(BaseService.java:45)
+	at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+	at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+	at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+</pre></div></td>
+<td>0</td>
+<td>com.api.testRuns.RunTest@4e5ed836</td></tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User updates password", "Display user profile details"</td>
+<td><div><pre>java.lang.RuntimeException: Status code generated is 500
+	at com.api.filters.CustomError.filter(CustomError.java:19)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at com.api.services.BaseService.putMethod(BaseService.java:45)
+	at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+	at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+	at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1532964105", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1532964105'><pre>java.lang.RuntimeException: Status code generated is 500
+	at com.api.filters.CustomError.filter(CustomError.java:19)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at com.api.services.BaseService.putMethod(BaseService.java:45)
+	at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+	at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+	at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+</pre></div></td>
+<td>0</td>
+<td>com.api.testRuns.RunTest@4e5ed836</td></tr>
+<tr>
+<td title='com.api.testRuns.RunTest.runScenario()'><b>runScenario</b><br>Test class: com.api.testRuns.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User updates password", "Display user profile details"</td>
+<td><div><pre>java.lang.RuntimeException: Status code generated is 500
+	at com.api.filters.CustomError.filter(CustomError.java:19)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at com.api.services.BaseService.putMethod(BaseService.java:45)
+	at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+	at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+	at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace451641953", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace451641953'><pre>java.lang.RuntimeException: Status code generated is 500
+	at com.api.filters.CustomError.filter(CustomError.java:19)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+	at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+	at groovy.lang.Closure.call(Closure.java:471)
+	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+	at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at com.api.services.BaseService.putMethod(BaseService.java:45)
+	at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+	at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+	at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+</pre></div></td>
+<td>0</td>
+<td>com.api.testRuns.RunTest@4e5ed836</td></tr>
+</table><p>
+</body>
+</html>

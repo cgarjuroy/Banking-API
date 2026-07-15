@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results retried="3" ignored="0" total="7" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-02T18:32:46 IST" name="Default suite" finished-at="2026-07-02T18:32:58 IST" duration-ms="11720">
+  <suite started-at="2026-07-08T22:44:44 IST" name="Cucumber API Automation Suite" finished-at="2026-07-08T22:44:53 IST" duration-ms="9065">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@338fc1d8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-07-02T18:32:46 IST" name="Default test" finished-at="2026-07-02T18:32:58 IST" duration-ms="11720">
+    <test started-at="2026-07-08T22:44:44 IST" name="API Tests" finished-at="2026-07-08T22:44:53 IST" duration-ms="9065">
       <class name="com.api.testRuns.RunTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.api.testRuns.RunTest@338fc1d8]" started-at="2026-07-02T18:32:46 IST" name="setUpClass" finished-at="2026-07-02T18:32:48 IST" duration-ms="1836" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:44 IST" name="setUpClass" finished-at="2026-07-08T22:44:45 IST" duration-ms="678" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6a261998]]>
+                <![CDATA[org.testng.TestRunner@544d57e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@338fc1d8]" started-at="2026-07-02T18:32:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-02T18:32:56 IST" duration-ms="8345" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T22:44:50 IST" duration-ms="5317" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@338fc1d8]" started-at="2026-07-02T18:32:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-02T18:32:57 IST" duration-ms="424" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T22:44:52 IST" duration-ms="1390" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,27 +53,359 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@338fc1d8]" started-at="2026-07-02T18:32:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-02T18:32:57 IST" duration-ms="251" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T22:44:52 IST" duration-ms="754" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Display account details"]]>
+                <![CDATA["Display user details"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Display user account details"]]>
+                <![CDATA["Display user profile details"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.api.testRuns.RunTest@338fc1d8]" started-at="2026-07-02T18:32:57 IST" name="tearDownClass" finished-at="2026-07-02T18:32:58 IST" duration-ms="713" status="PASS">
+        <test-method retried="true" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T22:44:53 IST" duration-ms="272" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User updates password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Display user profile details"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Status code generated is 500]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Status code generated is 500
+at com.api.filters.CustomError.filter(CustomError.java:19)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.Closure.call(Closure.java:471)
+at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+at com.api.services.BaseService.putMethod(BaseService.java:45)
+at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method retried="true" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T22:44:53 IST" duration-ms="180" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User updates password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Display user profile details"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Status code generated is 500]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Status code generated is 500
+at com.api.filters.CustomError.filter(CustomError.java:19)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.Closure.call(Closure.java:471)
+at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+at com.api.services.BaseService.putMethod(BaseService.java:45)
+at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method retried="true" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T22:44:53 IST" duration-ms="148" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User updates password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Display user profile details"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Status code generated is 500]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Status code generated is 500
+at com.api.filters.CustomError.filter(CustomError.java:19)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.Closure.call(Closure.java:471)
+at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+at com.api.services.BaseService.putMethod(BaseService.java:45)
+at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T22:44:53 IST" duration-ms="153" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User updates password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Display user profile details"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Status code generated is 500]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Status code generated is 500
+at com.api.filters.CustomError.filter(CustomError.java:19)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy:186)
+at io.restassured.internal.RequestSpecificationImpl$_put_closure3.doCall(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.Closure.call(Closure.java:471)
+at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+at jdk.proxy1/jdk.proxy1.$Proxy26.get(Unknown Source)
+at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:185)
+at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+at com.api.services.BaseService.putMethod(BaseService.java:45)
+at com.api.services.UserManagement.changePassword(UserManagement.java:26)
+at com.api.stepDefinitions.UserProfile_02.user_updated_password_from_user_management(UserProfile_02.java:63)
+at ✽.User updated password from user management(file:///C:/Users/arjuroy/STS/New%20folder/Banking-API/src/test/resources/features/02_UserManagement.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.api.testRuns.RunTest@4e5ed836]" started-at="2026-07-08T22:44:53 IST" name="tearDownClass" finished-at="2026-07-08T22:44:53 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.api.testRuns.RunTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- API Tests -->
+  </suite> <!-- Cucumber API Automation Suite -->
 </testng-results>

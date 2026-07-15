@@ -4,7 +4,7 @@ import io.restassured.response.Response;
 
 public class AccountController extends BaseService {
 
-	private static final String PATH ="/api/accounts";
+	private final String PATH ="/api/accounts";
 	
 	public void token(String token)
 	{
