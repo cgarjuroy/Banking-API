@@ -1,5 +1,7 @@
 package com.api.stepDefinitions;
 
+import java.util.concurrent.TimeUnit;
+
 import org.testng.Assert;
 
 import com.api.model.response.ProfileResponse;
@@ -9,38 +11,39 @@ import com.api.services.UserManagement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.response.Response;
 
-public class UserProfile {
-	static String token;
-	Response response;
-	PasswordRequest payload;
+public class UserProfile_02 {
+	
+	private final TestContext context;
+	private PasswordRequest payload;
+	private final UserManagement userManagement;
 
+	public UserProfile_02(TestContext context, UserManagement userManagement) 
+	{
+		this.context = context;
+		this.userManagement = userManagement;
+	}
+	
 	//Scenario: Display user details------------------------------------------------------------
 	
 	@Given("User has login credentials")
 	public void user_has_login_credentials() {
-	    token = Login.token;
+		Assert.assertNotNull(context.getToken(),"Token is Null!");
 	}
 
 	@When("User navigates to user management")
 	public void user_navigates_to_user_management() {
-		UserManagement user = new UserManagement();
-		user.token(token);
-	    response = user.userProfile();
+		userManagement.token(context.getToken());
+	    context.setResponse(userManagement.userProfile());
 	}
 
 	@Then("User profile details are displayed successfully")
 	public void user_profile_details_are_displayed_successfully() {
-	    ProfileResponse profileResponse = response.as(ProfileResponse.class);
-	    
-	    try {
-	    	Assert.assertEquals(profileResponse.getFirstName(), "Arjun");
-	    	Assert.assertEquals(profileResponse.getUsername(), "arroy");
-	    }catch (Exception e)
-	    {
-	    	Assert.fail();
-	    }
+	    ProfileResponse profileResponse = context.getResponse().as(ProfileResponse.class);
+
+	    Assert.assertEquals(profileResponse.getFirstName(), "Arjun");
+	    Assert.assertEquals(profileResponse.getUsername(), "arroy");
+	    userManagement.schemaValidation(context.getResponse());
 	}
 	
 	
@@ -50,26 +53,20 @@ public class UserProfile {
 	
 	@Given("User has logged into account")
 	public void user_has_logged_into_account() {
-		payload = new PasswordRequest.Builder()
+		payload = PasswordRequest.builder()
 				.confirmPassword("pass@1234").currentPassword("Pwd@1234").newPassword("pass@1234").build();
 	}
 
 	@When("User updated password from user management")
 	public void user_updated_password_from_user_management() {
-	    UserManagement user = new UserManagement();
-	    user.token(token);
-	    response = user.changePassword(payload);
+		userManagement.token(context.getToken());
+	    context.setResponse(userManagement.changePassword(payload));
 	}
 
 	@Then("Password is updated successfully")
 	public void password_is_updated_successfully() {
-	    try {
-	    	Assert.assertEquals(response.statusCode(), 200);
-	    	
-	    }catch (Exception f)
-	    {
-	    	Assert.fail();
-	    }
+	    Assert.assertEquals(context.getResponse().statusCode(), 200);	
+	    Assert.assertTrue(context.getResponse().getTimeIn(TimeUnit.SECONDS)<2000);
 	}
 
 }

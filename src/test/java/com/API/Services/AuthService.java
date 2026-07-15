@@ -6,7 +6,8 @@ import io.restassured.response.Response;
 
 public class AuthService extends BaseService {
 	
-	private static final String PATH = "/api/auth/"; 
+	private final String PATH = "/api/auth/"; 
+	private final String SCHEMA_PATH = "JsonSchemas/LoginResponse.json";
 
 	
 	public Response signUp(SignUpRequest payload)
@@ -14,9 +15,13 @@ public class AuthService extends BaseService {
 		return postMethod(payload, PATH+"signup"); 
 	}
 	
-	
 	public Response login(String payload)
 	{
 		return postMethod(payload, PATH+"login"); 
+	}
+	
+	public void schemaValidator(Response response)
+	{
+		 jsonSchemaValidator(response, SCHEMA_PATH);
 	}
 }
